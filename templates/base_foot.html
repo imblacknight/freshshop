@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+	<script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/static/js/register.js"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {# 第一层公共模版：定义块block header，让第二层公共模版加入导航条、搜索框内容 #}
+    {% block header%}{% endblock %}
+    {% block body %}{% endblock %}
+	<div class="footer no-mp">
+		<div class="foot_link">
+			<a href="#">关于我们</a>
+			<span>|</span>
+			<a href="#">QQ</a>
+		</div>
+		<p>Welcome Flower mall</p>
+		<p>电话：123456</p>
+	</div>
+	{% block body_script %}{% endblock %}
+</body>
+</html>
